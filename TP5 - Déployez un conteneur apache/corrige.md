@@ -28,6 +28,9 @@ ansible-lint deploy.yml
 ```bash
 ansible-playbook -i hosts.yml -vvv deploy.yml
 ```
+```bash
+ ou ansible-playbook -i hosts.yml -vvv deploy.yml -- ask-pass 
+```
 
 #####  Push du code sur github
 ```bash
