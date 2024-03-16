@@ -1,7 +1,7 @@
 ---
 - name: "Apache installation using docker"
   hosts: prod
-  become: true  # pour les elevation de privileges lors des installations packages ici sudo pour le compte admin
+  become: true  # pour les elevation de privileges lors des installations packages ici sudo pour le compte admin mdp externaliser ds un file ansible.cfg
   pre_tasks:
     - name: Install EPEL repo
       package: name=epel-release state=present
