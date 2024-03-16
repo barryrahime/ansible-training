@@ -1,9 +1,9 @@
 ---
 - name: "Apache installation using docker"
   hosts: prod
-  become: true
+  become: true   # pour les elevation de privileges lors des installations packages ici sudo pour le compte admin
   vars:
-    ansible_sudo_pass: admin
+    ansible_sudo_pass: admin  # pour definir le mot de passe utiliser lors de lancement du sudo par ansible
   pre_tasks:
     - name: Install EPEL repo
       package: name=epel-release state=present
